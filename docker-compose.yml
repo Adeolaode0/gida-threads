@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  gida-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gida_threads_app
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+    volumes:
+      - ./backend/gida_store.db:/app/backend/gida_store.db
+    restart: unless-stopped

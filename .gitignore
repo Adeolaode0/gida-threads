@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment and sensitive variables
+.env
+.env*.local
+*.tfvars
+*.tfvars.json
+
+# Terraform runtime & state
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Excluded folders and scripts
+_backup/
+_backup_original_pre_glassmorphism/
+_backup_pre_glassmorphism/
+scratch/
+terraform/
+restore_*.ps1
+
+# OS & Editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
