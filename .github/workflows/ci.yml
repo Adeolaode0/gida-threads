@@ -7,7 +7,11 @@ on:
     branches: [main]
 
 jobs:
-  hello:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "CI is alive"
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t gida-threads:test .
