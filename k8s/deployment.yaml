@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gida-threads
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gida-threads
+  template:
+    metadata:
+      labels:
+        app: gida-threads
+    spec:
+      containers:
+        - name: gida-app
+          image: adeolami/gida-threads:latest
+          ports:
+            - containerPort: 5000
