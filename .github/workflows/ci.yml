@@ -24,4 +24,6 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name == 'push' }}
-          tags: adeolami/gida-threads:latest
+          tags: |
+            adeolami/gida-threads:latest
+            adeolami/gida-threads:${{ github.sha }}
